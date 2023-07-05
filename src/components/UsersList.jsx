@@ -1,6 +1,5 @@
 import User from "./User";
 
-
 export const UsersList = ({ users }) => {
   return (
     <ul>
