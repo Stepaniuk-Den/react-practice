@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "hasJob": false,
+        "hasJob": true,
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
@@ -26,7 +26,7 @@
     },
     {
         "id": 2,
-        "hasJob": false,
+        "hasJob": true,
         "name": "Ervin Howell",
         "username": "Antonette",
         "email": "Shanna@melissa.tv",
