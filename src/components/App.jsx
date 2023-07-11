@@ -6,11 +6,13 @@ import Button from './Button/Button';
 // import Form from './Form/Form';
 import { nanoid } from 'nanoid';
 import FormikForm from './FormFormik/Formik';
+import FilterForm from './FilterForm/FilterForm';
 
 export class App extends Component {
   state = {
     users: data,
     isShowForm: false,
+    filterQuery: '',
   };
 
   handleDelete = id => {
@@ -52,9 +54,18 @@ export class App extends Component {
     });
   };
 
+  handleChangeFilter = e => {
+    this.setState({
+      users: data.filter(user =>
+        user.name.toLowerCase().includes(e.target.value.toLowerCase())
+      ),
+    });
+  };
+
   render() {
     return (
       <Section title="UsersList">
+        <FilterForm handleChange={this.handleChangeFilter} />
         <UsersList
           users={this.state.users}
           handleDelete={this.handleDelete}
